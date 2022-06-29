@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.22054.150" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>Core</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Core" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.0</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>Zach</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Zach" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>zac</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>98572</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="zac_ftcomm" behavior="0" />
+      <RootComponent type="1" schemaName="zac_ftemea" behavior="0" />
+      <RootComponent type="1" schemaName="zac_ftfo" behavior="0" />
+      <RootComponent type="1" schemaName="zac_ftgcc" behavior="0" />
+      <RootComponent type="1" schemaName="zac_listitem" behavior="0" />
+      <RootComponent type="1" schemaName="zac_vtable" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="181" schemaName="OData v4 Data Provider" displayName="OData v4 Data Provider" solution="ODatav4DataProvider (9.0.0.642)" id="{a17be158-e9dd-e611-80d3-00155da29216}" />
+        <Dependent type="1" schemaName="zac_vtable" displayName="vtable" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="183" schemaName="zacolson datasource" displayName="zacolson datasource" solution="Active" id="{07950461-78ee-ec11-bb3d-000d3a31cc63}" />
+        <Dependent type="1" schemaName="zac_vtable" displayName="vtable" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>
