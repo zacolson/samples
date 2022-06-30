@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "zac_registration",
+    "MaxGetRowsCount": 500,
     "Name": "Registrations",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
@@ -25,6 +26,7 @@
       "timezoneruleversionnumber": "Time Zone Rule Version Number",
       "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
       "versionnumber": "Version Number",
+      "zac_checkin": "Check In",
       "zac_dateofbirth": "Date of Birth",
       "zac_firstname": "First Name",
       "zac_lastname": "Last Name",
@@ -93,6 +95,26 @@
     },
     "OptionSetTypeKey": "StatusType",
     "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Registrations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Check In (Registrations)",
+    "Name": "zac_registration_zac_checkin",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "zac_checkin",
+        "OptionSetReferenceEntityName": "Registrations"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "zac_checkin",
     "RelatedEntityName": "Registrations",
     "Type": "OptionSetInfo"
   }

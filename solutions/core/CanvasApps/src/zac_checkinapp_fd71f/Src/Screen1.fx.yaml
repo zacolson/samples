@@ -4,34 +4,58 @@ Screen1 As screen:
     ImagePosition: =ImagePosition.Fill
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
-        Fill: =RGBA(169, 169, 196, .75)
+        Fill: =RGBA(116, 116, 116, .5)
         Items: |
             =If(
                 And(IsBlank(TextInput1), IsBlank(TextInput2)),
-                SortByColumns(Registrations,"zac_lastname", Ascending),
+                SortByColumns(
+                    Filter(Registrations, 'Check In' <> 'Check In (Registrations)'.Yes), 
+                    "zac_lastname", 
+                    Ascending),
                 If(
                     And(!IsBlank(TextInput1), IsBlank(TextInput2)),
                     SortByColumns(
-                        Filter(Registrations, StartsWith('First Name', TextInput1.Text)),
+                        Filter(Registrations, StartsWith('First Name', TextInput1.Text) && 'Check In' <> 'Check In (Registrations)'.Yes),
                         "zac_lastname", 
                         Ascending),
                     If(
                         And(IsBlank(TextInput1), !IsBlank(TextInput2)),
                         SortByColumns(
-                            Filter(Registrations, StartsWith('Last Name', TextInput2.Text)),
+                            Filter(Registrations, StartsWith('Last Name', TextInput2.Text) && 'Check In' <> 'Check In (Registrations)'.Yes),
                             "zac_lastname", 
                         Ascending)
                     )
                 )
             )
         Layout: =Layout.Vertical
+        TemplateFill: |-
+            =If(
+                ThisItem.IsSelected,
+                RGBA(
+                    116,
+                    116,
+                    116,
+                    1
+                ),
+                ColorFade(
+                    RGBA(
+                        116,
+                        116,
+                        116,
+                        .5
+                    ),
+                    -2%
+                )
+            )
         TemplatePadding: =0
-        TemplateSize: =Min(168, Self.Height - 60)
+        TemplateSize: =137
+        Width: =636
         X: =693
         Y: =164
         ZIndex: =2
 
         Title4 As label:
+            Color: =RGBA(255, 255, 255, 1)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -46,31 +70,34 @@ Screen1 As screen:
             ZIndex: =1
 
         Subtitle3 As label:
-            Height: =Self.Size * 1.8
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =35
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'First Name'
+            Text: |-
+                ="Full name: " & ThisItem.'First Name' & " " & ThisItem.'Last Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
-            Y: =Title4.Y + Title4.Height + 2
+            Y: =60
             ZIndex: =2
 
         Body2 As label:
-            Height: =Self.Size * 4
+            Color: =RGBA(255, 255, 255, 1)
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Last Name'
+            Text: |-
+                ="Date of Birth: " & DateValue(ThisItem.'Date of Birth')
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
-            Y: =Subtitle3.Y + Subtitle3.Height + 4
+            Y: =95
             ZIndex: =3
 
         NextArrow4 As icon.ChevronRight:
@@ -78,7 +105,7 @@ Screen1 As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =60
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: =Select(Parent);Navigate(EditScreen);EditForm(Form2_1)
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
@@ -87,7 +114,7 @@ Screen1 As screen:
             Tooltip: ="View item details"
             Width: =60
             X: =568
-            Y: =40
+            Y: =47
             ZIndex: =4
 
         Separator4 As rectangle:
@@ -96,6 +123,13 @@ Screen1 As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+        Label5 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Check In'
+            X: =323
+            Y: =47
+            ZIndex: =6
 
     Rectangle1 As rectangle:
         Fill: =RGBA(116, 116, 116, 1)

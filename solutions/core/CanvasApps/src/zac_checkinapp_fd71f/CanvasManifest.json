@@ -101,6 +101,7 @@
   },
   "ScreenOrder": [
     "Screen1",
-    "CreateScreen"
+    "CreateScreen",
+    "EditScreen"
   ]
 }
