@@ -83,7 +83,9 @@
       <RootComponent type="1" schemaName="zac_ftfo" behavior="0" />
       <RootComponent type="1" schemaName="zac_ftgcc" behavior="0" />
       <RootComponent type="1" schemaName="zac_listitem" behavior="0" />
+      <RootComponent type="1" schemaName="zac_registration" behavior="0" />
       <RootComponent type="1" schemaName="zac_vtable" behavior="0" />
+      <RootComponent type="300" schemaName="zac_checkinapp_fd71f" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>

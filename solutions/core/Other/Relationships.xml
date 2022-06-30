@@ -5,6 +5,7 @@
   <EntityRelationship Name="business_unit_zac_ftfo" />
   <EntityRelationship Name="business_unit_zac_ftgcc" />
   <EntityRelationship Name="business_unit_zac_listitem" />
+  <EntityRelationship Name="business_unit_zac_registration" />
   <EntityRelationship Name="lk_zac_ftcomm_createdby" />
   <EntityRelationship Name="lk_zac_ftcomm_modifiedby" />
   <EntityRelationship Name="lk_zac_ftemea_createdby" />
@@ -15,19 +16,24 @@
   <EntityRelationship Name="lk_zac_ftgcc_modifiedby" />
   <EntityRelationship Name="lk_zac_listitem_createdby" />
   <EntityRelationship Name="lk_zac_listitem_modifiedby" />
+  <EntityRelationship Name="lk_zac_registration_createdby" />
+  <EntityRelationship Name="lk_zac_registration_modifiedby" />
   <EntityRelationship Name="owner_zac_ftcomm" />
   <EntityRelationship Name="owner_zac_ftemea" />
   <EntityRelationship Name="owner_zac_ftfo" />
   <EntityRelationship Name="owner_zac_ftgcc" />
   <EntityRelationship Name="owner_zac_listitem" />
+  <EntityRelationship Name="owner_zac_registration" />
   <EntityRelationship Name="team_zac_ftcomm" />
   <EntityRelationship Name="team_zac_ftemea" />
   <EntityRelationship Name="team_zac_ftfo" />
   <EntityRelationship Name="team_zac_ftgcc" />
   <EntityRelationship Name="team_zac_listitem" />
+  <EntityRelationship Name="team_zac_registration" />
   <EntityRelationship Name="user_zac_ftcomm" />
   <EntityRelationship Name="user_zac_ftemea" />
   <EntityRelationship Name="user_zac_ftfo" />
   <EntityRelationship Name="user_zac_ftgcc" />
   <EntityRelationship Name="user_zac_listitem" />
+  <EntityRelationship Name="user_zac_registration" />
 </EntityRelationships>
