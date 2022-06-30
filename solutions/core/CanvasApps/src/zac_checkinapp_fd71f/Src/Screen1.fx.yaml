@@ -1,0 +1,165 @@
+Screen1 As screen:
+    BackgroundImage: =lake
+    Fill: =RGBA(0, 0, 0, 0)
+    ImagePosition: =ImagePosition.Fill
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Fill: =RGBA(169, 169, 196, .75)
+        Items: |
+            =If(
+                And(IsBlank(TextInput1), IsBlank(TextInput2)),
+                SortByColumns(Registrations,"zac_lastname", Ascending),
+                If(
+                    And(!IsBlank(TextInput1), IsBlank(TextInput2)),
+                    SortByColumns(
+                        Filter(Registrations, StartsWith('First Name', TextInput1.Text)),
+                        "zac_lastname", 
+                        Ascending),
+                    If(
+                        And(IsBlank(TextInput1), !IsBlank(TextInput2)),
+                        SortByColumns(
+                            Filter(Registrations, StartsWith('Last Name', TextInput2.Text)),
+                            "zac_lastname", 
+                        Ascending)
+                    )
+                )
+            )
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(168, Self.Height - 60)
+        X: =693
+        Y: =164
+        ZIndex: =2
+
+        Title4 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Registration Number'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle3 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'First Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title4.Y + Title4.Height + 2
+            ZIndex: =2
+
+        Body2 As label:
+            Height: =Self.Size * 4
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Last Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Subtitle3.Y + Subtitle3.Height + 4
+            ZIndex: =3
+
+        NextArrow4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =568
+            Y: =40
+            ZIndex: =4
+
+        Separator4 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(116, 116, 116, 1)
+        Width: =1366
+        ZIndex: =3
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =57
+        Size: =25
+        Text: ="Lookup or Create Registration"
+        Width: =533
+        X: =416
+        Y: =21
+        ZIndex: =4
+
+    Label2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Text: |-
+            ="First Name:"
+        X: =96
+        Y: =146
+        ZIndex: =5
+
+    Label3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Text: |-
+            ="Last Name:"
+        X: =96
+        Y: =245
+        ZIndex: =6
+
+    TextInput1 As text:
+        Default: =
+        X: =96
+        Y: =190
+        ZIndex: =7
+
+    TextInput2 As text:
+        Default: =
+        X: =96
+        Y: =300
+        ZIndex: =8
+
+    Button1 As button:
+        Fill: =RGBA(169, 169, 169, 1)
+        Height: =66
+        OnSelect: =Reset(TextInput1);Reset(TextInput2);Navigate(CreateScreen)
+        Text: ="Create Registration"
+        Visible: =IsEmpty(Gallery1.AllItems)
+        X: =933
+        Y: =408
+        ZIndex: =9
+
+    Label4 As label:
+        Align: =Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =74
+        Size: =20
+        Text: ="No Registrations Found"
+        Visible: =Button1.Visible
+        Width: =308
+        X: =859
+        Y: =321
+        ZIndex: =10
+

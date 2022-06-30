@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "zac_registrations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "zac_registration",
+    "Name": "Registrations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number",
+      "zac_dateofbirth": "Date of Birth",
+      "zac_firstname": "First Name",
+      "zac_lastname": "Last Name",
+      "zac_registration_AsyncOperations": "System Jobs",
+      "zac_registration_BulkDeleteFailures": "Bulk Delete Failures",
+      "zac_registration_DuplicateBaseRecord": "Duplicate Records (zac_registration_DuplicateBaseRecord)",
+      "zac_registration_DuplicateMatchingRecord": "Duplicate Records (zac_registration_DuplicateMatchingRecord)",
+      "zac_registration_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "zac_registration_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "zac_registration_ProcessSession": "Process Sessions",
+      "zac_registration_SyncErrors": "Sync Errors",
+      "zac_registrationid": "Registration",
+      "zac_registrationnumber": "Registration Number"
+    },
+    "PreferredName": "Registrations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Registrations (Views)",
+    "Name": "_zac_registration_views",
+    "RelatedEntityName": "Registrations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1b75e9be-0277-4830-9c8d-03051c8cead2": "Registration Advanced Find View",
+      "9fed570d-b278-4cd2-9212-b0536687f0a3": "Registration Associated View",
+      "a4b522c0-7b45-4608-b010-c12ef419c463": "Registration Lookup View",
+      "e1e9ee53-c41a-4239-8c16-84611e9e0a38": "Inactive Registrations",
+      "ea218b45-53da-4325-a8df-34a68128d61c": "Active Registrations"
+    }
+  },
+  {
+    "DisplayName": "Status (Registrations)",
+    "Name": "zac_registration_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Registrations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Registrations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Registrations)",
+    "Name": "zac_registration_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Registrations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Registrations",
+    "Type": "OptionSetInfo"
+  }
+]
